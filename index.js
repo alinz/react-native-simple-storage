@@ -43,7 +43,7 @@ export class Storage {
     return `${this.name}:${key}`
   }
 
-  setKeyValue = async (key: string, value: any): Promise<void> => {
+  set = async (key: string, value: any): Promise<void> => {
     return new Promise((resolve, reject) => {
       logger.group('storage', `set to ${this.name}`, async (log) => {
         const strValue = toString(value)
